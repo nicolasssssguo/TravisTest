@@ -491,8 +491,7 @@ test {
     jvmArgs "-Xss2m", "-Dfile.encoding=UTF-8"
     afterTest afterTestClosure
     testLogging {
-        events "passed", "skipped", "failed"
-        exceptionFormat "full"
+        events "passed"
     }
 }
 

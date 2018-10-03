@@ -4,8 +4,6 @@ import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
-import java.util.regex.Pattern;
-
 import com.google.common.base.Strings;
 
 import teammates.common.datatransfer.StudentUpdateStatus;

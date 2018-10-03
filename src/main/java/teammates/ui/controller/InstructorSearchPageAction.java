@@ -26,7 +26,7 @@ public class InstructorSearchPageAction extends Action {
         }
 
         int numberOfSearchOptions = 0;
-        String test =  getRequestParamValue("test");
+        String test = getRequestParamValue("test");
         boolean isSearchForStudents = getRequestParamAsBoolean(Const.ParamsNames.SEARCH_STUDENTS);
         if (isSearchForStudents) {
             numberOfSearchOptions++;
@@ -64,13 +64,13 @@ public class InstructorSearchPageAction extends Action {
 
             if (totalResultsSize == 0) {
                 statusToUser.add(new StatusMessage(Const.StatusMessages.INSTRUCTOR_SEARCH_NO_RESULTS,
-                                                   StatusMessageColor.WARNING));
+                        StatusMessageColor.WARNING));
             }
         }
 
         InstructorSearchPageData data = new InstructorSearchPageData(account, sessionToken);
         data.init(frCommentSearchResults, studentSearchResults, searchKey, isSearchFeedbackSessionData, isSearchForStudents);
 
-        return test == null ? createShowPageResult(Const.ViewURIs.INSTRUCTOR_SEARCH, data): createAjaxResult(data);
+        return test == null ? createShowPageResult(Const.ViewURIs.INSTRUCTOR_SEARCH, data) : createAjaxResult(data);
     }
 }

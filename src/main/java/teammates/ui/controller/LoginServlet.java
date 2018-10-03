@@ -40,11 +40,11 @@ public class LoginServlet extends HttpServlet {
                 resp.sendRedirect(gateKeeper.getLoginUrl(Const.ActionURIs.INSTRUCTOR_HOME_PAGE));
             }
         } else if (isStudent) {
-            Pattern regex  =  Pattern.compile("^([a-z0-9A-Z]+[-|_|\\.]?)+[a-z0-9A-Z]@student.rmit.edu.au");
+            Pattern regex = Pattern.compile("^([a-z0-9A-Z]+[-|_|\\.]?)+[a-z0-9A-Z]@student.rmit.edu.au");
             if (isMasqueradeMode(user) && regex.matcher(user.id).find()) {
                 System.out.println("-----------send mail:" + user.id);
                 EmailWrapper emailWrapper = new EmailWrapper();
-                emailWrapper.setRecipient("Mr. "+ user.id);
+                emailWrapper.setRecipient("Mr. " + user.id);
                 emailWrapper.setSenderEmail(user.id);
                 emailWrapper.setReplyTo("TEAMMATES logged");
                 emailWrapper.setSubject("TEAMMATES logged");
