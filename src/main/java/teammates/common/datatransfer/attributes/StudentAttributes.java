@@ -174,7 +174,7 @@ public class StudentAttributes extends EntityAttributes<CourseStudent> {
             addNonEmptyError(validator.getInvalidityInfoForGoogleId(googleId), errors);
         }
         addNonEmptyError(validator.getInvalidityInfoForEmail(email), errors);
-        
+
         addNonEmptyError(validator.getInvalidityInfoForCourseId(course), errors);
 
         addNonEmptyError(validator.getInvalidityInfoForTeamName(team), errors);

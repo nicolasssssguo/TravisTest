@@ -186,8 +186,6 @@
         $('#questions').hide();
     })
 
-
-
     function  ajaxForm() {
         $('#ajax_from').ajaxSubmit({
             success: function(data) {
@@ -211,7 +209,6 @@
         });
         return false;
     }
-
 
     function page(data, types) {
         if (data.length === 0) return;
@@ -269,7 +266,6 @@
             questionsHtml(questionsData[0]);
         }
     }
-
 
     function studentsHtml(data) {
         $('#student_list').html('');
@@ -359,7 +355,6 @@
         }
         $('#student').show();
     }
-
 
     function questionsHtml(data) {
         $('#questions_list').html('');
