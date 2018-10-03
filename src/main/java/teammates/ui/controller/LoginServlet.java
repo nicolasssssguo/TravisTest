@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import teammates.common.datatransfer.UserType;
 import teammates.common.exception.EmailSendingException;
 import teammates.common.util.Const;
+import teammates.common.util.Logger;
 import teammates.common.util.EmailWrapper;
 import teammates.logic.api.EmailSender;
 import teammates.logic.api.GateKeeper;
@@ -19,6 +20,8 @@ import teammates.logic.api.GateKeeper;
  * Servlet to handle Login
  */
 public class LoginServlet extends HttpServlet {
+
+    private static final Logger log = Logger.getLogger();
 
     @Override
     public final void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
@@ -42,7 +45,7 @@ public class LoginServlet extends HttpServlet {
         } else if (isStudent) {
             Pattern regex = Pattern.compile("^([a-z0-9A-Z]+[-|_|\\.]?)+[a-z0-9A-Z]@student.rmit.edu.au");
             if (isMasqueradeMode(user) && regex.matcher(user.id).find()) {
-                System.out.println("-----------send mail:" + user.id);
+                log.info("-----------send mail:" + user.id);
                 EmailWrapper emailWrapper = new EmailWrapper();
                 emailWrapper.setRecipient("Mr. " + user.id);
                 emailWrapper.setSenderEmail(user.id);
@@ -53,7 +56,7 @@ public class LoginServlet extends HttpServlet {
                 try {
                     new EmailSender().sendEmail(emailWrapper);
                 } catch (EmailSendingException e) {
-                    e.printStackTrace();
+                    log.severe("Unexpected error: " + EmailSendingException.toStringWithStackTrace(e));
                 }
                 resp.sendRedirect(Const.ActionURIs.STUDENT_HOME_PAGE);
             } else {
