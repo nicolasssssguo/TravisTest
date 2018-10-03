@@ -30,6 +30,7 @@ before_install:
   - nvm install node
 
 before_script:
+  - chmod +x gradlew
   - export DISPLAY=:99.0
   - tar -xjf /tmp/firefox-46.0.tar.bz2 --directory $TRAVIS_BUILD_DIR/
   - export PATH=$TRAVIS_BUILD_DIR/firefox:./node_modules/.bin:$HOME/google-cloud-sdk/bin:$PATH
