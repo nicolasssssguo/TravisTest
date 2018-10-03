@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 import teammates.common.datatransfer.UserType;
 import teammates.common.exception.EmailSendingException;
 import teammates.common.util.Const;
-import teammates.common.util.Logger;
 import teammates.common.util.EmailWrapper;
+import teammates.common.util.Logger;
 import teammates.logic.api.EmailSender;
 import teammates.logic.api.GateKeeper;
 
