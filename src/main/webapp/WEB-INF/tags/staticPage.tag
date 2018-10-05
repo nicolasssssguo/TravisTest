@@ -41,8 +41,9 @@
               <li class="${currentPage == 'contact' ? 'active' : ''}"><a href="contact.jsp">Contact</a></li>
               <li class="${currentPage == 'terms' ? 'active' : ''}"><a href="terms.jsp">Terms of Use</a></li>
             </ul>
-            <form class="navbar-form navbar-right" action="/login" name="login" onsubmit="return x();">
-              <input type="submit" name="instructor" class="btn btn-login" id="btnInstructorLogin" value="Login" label="Login">
+            <form class="navbar-form navbar-right" action="/login" name="login">
+              <input type="submit" name="student" class="btn btn-login " id="btnStudentLogin" value="Student Login" label="studentLogin">
+              <input type="submit" name="instructor" class="btn btn-login" id="btnInstructorLogin" value="Instructor Login" label="instructorLogin">
             </form>
           </div>
         </div>
