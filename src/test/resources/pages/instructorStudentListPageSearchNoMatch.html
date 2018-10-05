@@ -6,7 +6,7 @@
   </h1>
   <br>
   <div>
-    <form action="/page/instructorSearchPage?user=instructorWith2Courses" method="get" name="search_form">
+    <form action="/page/instructorSearchPage?user=instructorWith2Courses" id="ajax_from" method="get" name="search_form" onsubmit="return ajaxForm()">
       <div class="well well-plain">
         <div class="form-group">
           <div class="input-group">
@@ -18,11 +18,12 @@
             </span>
           </div>
           <input name="user" type="hidden" value="instructorWith2Courses">
+          <input name="test" type="hidden" value="test">
         </div>
         <div class="form-group">
           <ul class="list-inline">
             <li>
-              <span class="glyphicon glyphicon-info-sign" data-original-title="Tick the checkboxes to limit your search to certain categories" data-toggle="tooltip" title="">
+              <span class="glyphicon glyphicon-info-sign" data-toggle="tooltip" title="Tick the checkboxes to limit your search to certain categories">
               </span>
             </li>
             <li>
@@ -45,9 +46,56 @@
   <br>
   <div id="statusMessagesToUser">
     <div class="overflow-auto alert alert-warning icon-warning statusMessage">
-      No results found.
+      Search Tips:
+      <br>
+      <ul>
+        <li>
+          Put more keywords to search for more precise results.
+        </li>
+        <li>
+          Put quotation marks around words
+          <b>
+            "[any word]"
+          </b>
+          to search for an exact phrase in an exact order.
+        </li>
+      </ul>
     </div>
   </div>
   <script defer="" src="/js/statusMessage.js" type="text/javascript">
   </script>
+  <div class="panel panel-primary" id="questions">
+    <div class="panel-heading">
+      <strong>
+        Questions, responses, comments on responses
+      </strong>
+    </div>
+    <div class="select">
+      <select id="questions_num">
+        <option value="1">1 num</option>
+        <option value="20">20 num</option>
+      </select>
+    </div>
+    <div id="questions_list" style="padding: 0 15px;">
+    </div>
+    <div class="m-style" id="questions_page"></div>
+  </div>
+  <br>
+  <div class="panel panel-primary" id="student">
+    <div class="panel-heading">
+      <strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+        Students
+      </font></font></strong>
+    </div>
+    <div class="select">
+      <select id="student_num">
+        <option value="10">10 num</option>
+        <option value="20">20 num</option>
+      </select>
+    </div>
+    <div id="student_list" style="padding: 0 15px;">
+    </div>
+    <div class="m-style" id="student_page"></div>
+  </div>
+</div>
 </div>

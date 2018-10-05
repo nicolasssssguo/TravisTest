@@ -3,7 +3,7 @@
 <%@ tag import="teammates.common.util.Const"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<div style="max-width: 700px;margin-left:  inherit;">
+<div>
   <form method="get" action="${data.instructorSearchLink}" name="search_form" id="ajax_from" onsubmit="return ajaxForm()">
     <div class="well well-plain">
 
