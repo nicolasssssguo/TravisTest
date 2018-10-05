@@ -293,13 +293,13 @@ public class StudentAttributesTest extends BaseTestCaseWithMinimalGaeEnvironment
                     FieldValidator.GOOGLE_ID_ERROR_MESSAGE, "invalid@google@id",
                     FieldValidator.GOOGLE_ID_FIELD_NAME, FieldValidator.REASON_INCORRECT_FORMAT,
                     FieldValidator.GOOGLE_ID_MAX_LENGTH) + System.lineSeparator()
-                + getPopulatedEmptyStringErrorMessage(
-                      FieldValidator.COURSE_ID_ERROR_MESSAGE_EMPTY_STRING,
-                      FieldValidator.COURSE_ID_FIELD_NAME, FieldValidator.COURSE_ID_MAX_LENGTH) + System.lineSeparator()
                 + getPopulatedErrorMessage(
                       FieldValidator.EMAIL_ERROR_MESSAGE, "invalid email",
                       FieldValidator.EMAIL_FIELD_NAME, FieldValidator.REASON_INCORRECT_FORMAT,
                       FieldValidator.EMAIL_MAX_LENGTH) + System.lineSeparator()
+                + getPopulatedEmptyStringErrorMessage(
+                      FieldValidator.COURSE_ID_ERROR_MESSAGE_EMPTY_STRING,
+                      FieldValidator.COURSE_ID_FIELD_NAME, FieldValidator.COURSE_ID_MAX_LENGTH) + System.lineSeparator()
                 + getPopulatedErrorMessage(
                       FieldValidator.SIZE_CAPPED_NON_EMPTY_STRING_ERROR_MESSAGE,
                       "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
