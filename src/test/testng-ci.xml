@@ -34,7 +34,6 @@
             <class name="teammates.test.cases.browsertests.StudentHomePageUiTest" />
             <class name="teammates.test.cases.browsertests.AdminHomePageUiTest" />
             <class name="teammates.test.cases.browsertests.AllAccessControlUiTests" />-->
-            <class name="teammates.test.cases.browsertests.StudentCourseJoinConfirmationPageUiTest" />
         </classes>
     </test>
 
@@ -42,9 +41,9 @@
      <!-- These need not to run often unless the modification relates to them
     directly. But they should be run before pushing new code to the repo. -->
         <classes>
-            <class name="teammates.test.cases.browsertests.SystemErrorEmailReportTest" />
+            <!--<class name="teammates.test.cases.browsertests.SystemErrorEmailReportTest" />
             <class name="teammates.test.cases.browsertests.TableSortTest" />
-            <class name="teammates.test.cases.browsertests.AllJsTests" />
+            <class name="teammates.test.cases.browsertests.AllJsTests" />-->
         </classes>
     </test>
 
@@ -99,7 +98,6 @@
             <class name="teammates.test.cases.browsertests.InstructorSearchPageUiTest" />
             <class name="teammates.test.cases.browsertests.InstructorStudentListPageUiTest" />
             <class name="teammates.test.cases.browsertests.InstructorStudentRecordsPageUiTest" />
-            <class name="teammates.test.cases.browsertests.AdminEmailPageUiTest" />
         </classes>
     </test>
 
